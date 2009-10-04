@@ -70,7 +70,7 @@ class Mechanize
     end
 
     def encoding
-      parser.respond_to?(:encoding) ? parser.encoding : nil
+      (parser.respond_to?(:encoding) ? parser.encoding : nil) || @encoding
     end
 
     def parser
